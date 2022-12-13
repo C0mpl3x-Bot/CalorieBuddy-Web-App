@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+
+    <title>List webpage!</title>
+
+    <!--custom font>-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <!--custom css for icons-->
+    <!--code was from w3schools https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp the code was adpated.No author found.No date found-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <!-- header-->
+    <h1>Calorie Buddy - <%= pagetitle %>
+    </h1>
+
+    <!-- navigation bar which links all pages together -->
+    <nav class="nav">
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/about'>About</a></li>
+            <li><a href='/addfood'>Add Food</a></li>
+            <li><a href='/register'>Register</a></li>
+            <li><a href='/searchfood'>Search Food</a></li>
+            <li><a href='/updatefood'>Update Food Page</a></li>
+            <li><a href='/list'>List</a></li>
+            <li><a href='/api'>API</a></li>
+            <li><a href='/login'>Login</a></li>
+            <li><a href='/logout'>Logout</a></li>
+        </ul>
+    </nav>
+
+    <!--Page Name/Header-->
+    <h1 class="centred"> This Is <%= pagetitle %> Page </h1>
+
+    <p>You can see all the information of the foods in our database <%=UniqueWord %>:</p>
+    <!-- GET request which directs user to InfoCalculated Page -->
+    <form method="GET" action="/InfoCalculated" </form>
+        <!-- Table with all the foods in the database with a checkbox and a form box that lets the user input the amount of each food item in the recipe  -->
+        <ul>
+            <div class="ptable">
+                <table class="table">
+                    <tr class="col">
+                        <th>Food Name</th>
+                        <th></th>
+                        <th>Typical Value Per</th>
+                        <th></th>
+                        <th>Food Unit Of The Typical Value</th>
+                        <th></th>
+                        <th>Calories</th>
+                        <th></th>
+                        <th>Carbs</th>
+                        <th></th>
+                        <th>Fat</th>
+                        <th></th>
+                        <th>Protein</th>
+                        <th></th>
+                        <th>Salt</th>
+                        <th></th>
+                        <th>Sugar</th>
+                        <th></th>
+                        <th>Submit</th>
+
+                    </tr>
+                    <% availablefoods.forEach(function(food,input){ %>
+                        <tr class="wpos">
+                            <td>
+                                <%= food.name %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.typicalvalues %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.unit_of_the_typical_value %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.kilocalories %> kcal
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.carbs %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.fat %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.protein %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.salt %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <%= food.sugar %>
+                            </td>
+                            <th></th>
+                            <td>
+                                <input type="checkbox" id="checkbox" name="checkbox">
+                                <input type="number" id="number" name="inputAmount">
+                            </td>
+                        </tr>
+                        <% }) %>
+                </table>
+            </div>
+        </ul>
+        <!-- submit box to submit the GET request -->
+        <input type="submit" value="submit">
+</body>
+
+</html>

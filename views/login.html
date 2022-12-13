@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+
+    <title>Calorie Buddy - Login Page</title>
+
+    <!--custom font>-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <!--custom css for icons-->
+    <!--code was from w3schools https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp the code was adpated.No author found.No date found-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <!-- header-->
+    <h1> Welcome To The Login Page Of Calorie Buddy</h1>
+
+    <!-- navigation bar which links all pages together -->
+    <nav class="nav">
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/about'>About</a></li>
+            <li><a href='/addfood'>Add Food</a></li>
+            <li><a href='/register'>Register</a></li>
+            <li><a href='/searchfood'>Search Food</a></li>
+            <li><a href='/updatefood'>Update Food Page</a></li>
+            <li><a href='/list'>List</a></li>
+            <li><a href='/api'>API</a></li>
+            <li><a href='/login'>Login</a></li>
+            <li><a href='/logout'>Logout</a></li>
+        </ul>
+    </nav>
+
+    <!--Page Name/Header-->
+    <h1 class="centred">Welcome To The Login Page</h1>
+    <p><strong>Please fill in the boxes to login:</strong></p>
+</body>
+
+<!-- POST request which has form boxes that allows user to login if they have an account-->
+<form method="POST" action="/loggedin">
+    <label for="username"><b>Username:</b></label>
+    <input id="username" type="text" name="username" value="username" />
+    <br>
+    <label for="password"><b>Password:</b></label>
+    <input id="password" type="text" name="password" value="password" />
+    <br>
+    <input type="submit" value="Submit" />
+</form>
+
+</html>

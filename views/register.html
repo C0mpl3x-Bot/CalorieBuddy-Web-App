@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+
+    <title>Calorie Buddy - Register Page</title>
+
+    <!--custom font>-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <!--custom css for icons-->
+    <!--code was from w3schools https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp the code was adpated.No author found.No date found-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <!-- header-->
+    <h1> Welcome To The Register Page Of Calorie Buddy</h1>
+
+    <!-- navigation bar which links all pages together -->
+    <nav class="nav">
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/about'>About</a></li>
+            <li><a href='/addfood'>Add Food</a></li>
+            <li><a href='/register'>Register</a></li>
+            <li><a href='/searchfood'>Search Food</a></li>
+            <li><a href='/updatefood'>Update Food Page</a></li>
+            <li><a href='/list'>List</a></li>
+            <li><a href='/api'>API</a></li>
+            <li><a href='/login'>Login</a></li>
+            <li><a href='/logout'>Logout</a></li>
+        </ul>
+    </nav>
+
+    <!--Page Name/Header-->
+    <h1 class="centred">Welcome To The Register Page</h1>
+
+    <p><strong>Please fill this form to register:</strong></p>
+</body>
+
+<!-- POST request which has form boxes that allows user to register -->
+<form method="POST" action="/registered">
+    <label for="firstname"><b>First Name:</b></label>
+    <input id="firstname" type="text" name="firstname" value="firstname" />
+    <br>
+    <label for="lastname"><b>Last Name:</b></label>
+    <input id="lastname" type="text" name="lastname" value="lastname" />
+    <br>
+    <label for="email"><b>Email:</b></label>
+    <input id="email" type="email" name="email" value="email" />
+    <br>
+    <label for="username"><b>Username:</b></label>
+    <input id="username" type="text" name="username" value="username" />
+    <br>
+    <label for="password"><b>Password (Minimum Length Of 8):</b></label>
+    <input id="password" type="text" name="password" value="password" />
+    <br>
+    <input type="submit" value="Submit" />
+</form>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+
+    <title>Calorie Buddy - Add Food</title>
+
+    <!--custom font>-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <!--custom css for icons-->
+    <!--code was from w3schools https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp the code was adpated.No author found.No date found-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <!-- header-->
+    <h1>Calorie Buddy - Add Food</h1>
+
+    <!-- navigation bar which links all pages together -->
+    <nav class="nav">
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/about'>About</a></li>
+            <li><a href='/addfood'>Add Food</a></li>
+            <li><a href='/register'>Register</a></li>
+            <li><a href='/searchfood'>Search Food</a></li>
+            <li><a href='/updatefood'>Update Food Page</a></li>
+            <li><a href='/list'>List</a></li>
+            <li><a href='/api'>API</a></li>
+            <li><a href='/login'>Login</a></li>
+            <li><a href='/logout'>Logout</a></li>
+        </ul>
+    </nav>
+
+    <!--Page Name/Header-->
+    <h1 class="centred">Welcome To The Add Food Page Of Calorie Buddy </h1>
+    <p><strong>Please add the name, the typical value, unit of the typical value, calories, carbs, fat, protien, salt
+            and sugar of the food in the avaliable spaces below (Do Not Leave Any Of The Following Boxes Empty And Fill
+            In The Boxes With Number Written Above As A Number Otherwise You Will Be Redirected):</strong></p>
+</body>
+<!-- Allows user to input data to the database as a POST request allowing them to add a new food to -->
+<form method="POST" action="/foodadded">
+    <label for="name"><b>Name:</b></label>
+    <input id="name" type="text" name="name" value="Name" />
+    <br>
+    <label for="typicalvalues"><b>Typical Value (Number):</b></label>
+    <input id="typicalvalues" type="text" name="typicalvalues" value="Typical Value" />
+    <br>
+    <label for="unit_of_the_typical_value"><b>Unit Of The Typical Value:</b></label>
+    <input id="unit_of_the_typical_value" type="text" name="unit_of_the_typical_value"
+        value="Unit Of The Typical Value" />
+    <br>
+    <label for="kilocalories"><b>Calories (Number):</b></label>
+    <input id="kilocalories" type="text" name="kilocalories" value="Kilocalories" />
+    <br>
+    <label for="carbs"><b>Carbs (Number):</b></label>
+    <input id="carbs" type="text" name="carbs" value="Carbs" />
+    <br>
+    <label for="fat"><b>Fat (Number):</b></label>
+    <input id="fat" type="text" name="fat" value="Fat" />
+    <br>
+    <label for="protein"><b>Protein (Number):</b></label>
+    <input id="protein" type="text" name="protein" value="Protein" />
+    <br>
+    <label for="salt"><b>Salt (Number):</b></label>
+    <input id="salt" type="text" name="salt" value="Salt" />
+    <br>
+    <label for="sugar"><b>Sugar (Number):</b></label>
+    <input id="sugar" type="text" name="sugar" value="Sugar" />
+    <br>
+    <input type="submit" value="Submit" />
+</form>
+
+</html>

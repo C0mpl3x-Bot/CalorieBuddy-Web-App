@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1">
+
+  <title>List webpage!</title>
+
+  <!--custom font>-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+  <!--custom css-->
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <!--custom css for icons-->
+  <!--code was from w3schools https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp the code was adpated.No author found.No date found-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+  <!-- header-->
+  <h1>Calorie Buddy - <%= pagetitle %>
+  </h1>
+
+  <!-- navigation bar which links all pages together -->
+  <nav class="nav">
+    <ul>
+      <li><a href='/'>Home</a></li>
+      <li><a href='/about'>About</a></li>
+      <li><a href='/addfood'>Add Food</a></li>
+      <li><a href='/register'>Register</a></li>
+      <li><a href='/searchfood'>Search Food</a></li>
+      <li><a href='/updatefood'>Update Food Page</a></li>
+      <li><a href='/list'>List</a></li>
+      <li><a href='/api'>API</a></li>
+      <li><a href='/login'>Login</a></li>
+      <li><a href='/logout'>Logout</a></li>
+    </ul>
+  </nav>
+  <!--Page Name/Header-->
+  <h3>You can see all the foods in the db below <%=UniqueWord %>:</h3>
+  <!-- Creates Table to display the result of the users update page search -->
+  <ul>
+    <div class="ptable">
+      <table class="table">
+        <tr class="col">
+          <th>Food Name</th>
+          <th></th>
+          <th>Typical Value Per</th>
+          <th></th>
+          <th>Food Unit Of The Typical Value</th>
+          <th></th>
+          <th>Calories</th>
+          <th></th>
+          <th>Carbs</th>
+          <th></th>
+          <th>Fat</th>
+          <th></th>
+          <th>Protein</th>
+          <th></th>
+          <th>Salt</th>
+          <th></th>
+          <th>Sugar</th>
+          <th></th>
+        </tr>
+        <% availablefoods.forEach(function(food){ %>
+          <tr class="wpos">
+            <td>
+              <%= food.name %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.typicalvalues %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.unit_of_the_typical_value %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.kilocalories %> kcal
+            </td>
+            <th></th>
+            <td>
+              <%= food.carbs %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.fat %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.protein %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.salt %>
+            </td>
+            <th></th>
+            <td>
+              <%= food.sugar %>
+            </td>
+            <th></th>
+          </tr>
+          <% }) %>
+      </table>
+    </div>
+  </ul>
+</body>
+<p><strong> To Update A Specific Food Please Use Its Name And Fill In The Form Below (Do Not Leave Any Of The Following
+    Boxes Empty And Fill In The Boxes With Number Written Above As A Number Otherwise You Will Be Redirected) </strong>
+</p>
+<!-- POST Request where it allows user to input the data of the food and change the parts they wanted to update and this data would be sent to the Sever as a POST Request -->
+<form method="POST" action="/updateresult">
+  <label for="name"><b>Name:</b></label>
+  <input id="name" type="text" name="name" value="Name" />
+  <br>
+  <label for="typicalvalues"><b>Typical Value (Number):</b></label>
+  <input id="typicalvalues" type="text" name="typicalvalues" value="Typical Value" />
+  <br>
+  <label for="unit_of_the_typical_value"><b>Unit Of The Typical Value:</b></label>
+  <input id="unit_of_the_typical_value" type="text" name="unit_of_the_typical_value"
+    value="Unit Of The Typical Value" />
+  <br>
+  <label for="kilocalories"><b>Calories (Number):</b></label>
+  <input id="kilocalories" type="text" name="kilocalories" value="Kilocalories" />
+  <br>
+  <label for="carbs"><b>Carbs (Number):</b></label>
+  <input id="carbs" type="text" name="carbs" value="Carbs" />
+  <br>
+  <label for="fat"><b>Fat (Number):</b></label>
+  <input id="fat" type="text" name="fat" value="Fat" />
+  <br>
+  <label for="protein"><b>Protein (Number):</b></label>
+  <input id="protein" type="text" name="protein" value="Protein" />
+  <br>
+  <label for="salt"><b>Salt (Number):</b></label>
+  <input id="salt" type="text" name="salt" value="Salt" />
+  <br>
+  <label for="sugar"><b>Sugar (Number):</b></label>
+  <input id="sugar" type="text" name="sugar" value="Sugar" />
+  <br>
+  <input type="submit" value="Submit" />
+</form>
+
+<p><strong> To Delete A Specific Food Please Enter Its Name Below (Do Not Leave Any Boxes Empty Otherwise You Will Be
+    Redirected) </strong></p>
+<!-- POST Request where it allows user to input the name of the food they want to delete and that data would be sent to the server as a POST Request -->
+<form method="POST" action="/deletedfood">
+  <label for="name"><b>Food Name:</b></label>
+  <input id="name" type="text" name="name" value="name" />
+  <br>
+  <input type="submit" value="Submit" />
+</form>
+
+</html>

@@ -1,0 +1,297 @@
+/*Some of the code is from my old projects*/
+
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #C6C5C5;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0);
+  width: 75%;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin: 1rem;
+}
+
+/* Header Styles */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+  color: #3C1874;
+}
+
+/*images*/
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/*ID styles*/
+
+#header-img {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utility Classes */
+
+.mar2 {
+  margin: 2rem;
+}
+
+.mar1 {
+  margin: 0.5rem;
+}
+
+.mar0 {
+  margin: 0.35rem;
+}
+
+.centred {
+  text-align: center;
+}
+
+/*Form Styles*/
+
+input[type=text],[type = email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #6C767D;
+}
+
+/* Element Styles */
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  padding: 2rem;
+  float: none;
+}
+
+main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/*media queries*/
+
+@media (max-width:1000px) {
+  body, icon-bar {
+    width: 90%
+  }
+}
+
+/*mine that i learnt during lab */
+
+h2 {
+  text-align: center;
+}
+
+/*css is from w3schools https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp css was adpated so the icons are smaller and different icons are used some of the code was adapted. No author found. No Date found.*/
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Style the icon bar links */
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.content {
+  margin-left: -75px;
+  font-size: 30px;
+}
+
+/*css is from https://codepen.io/sonofchella/pen/JbyNLK css was adapted so table is streched and some of the colours were changed as well.Author is Dhivakar Chelladurai. Date created on was November 26, 2016*/
+
+/*standings table column*/
+
+.headin {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin: 30px;
+  display: block;
+}
+
+.ptable table {
+  margin: auto auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-left: -40px;
+}
+
+.ptable {
+  margin: 0px 0% 5px 0%;
+}
+
+td {
+  padding: 5px;
+}
+
+td {
+  width: 115px;
+}
+
+td {
+  background-color: #6C767D;
+}
+
+th {
+  color: white;
+}
+
+.row {
+  text-align: left;
+}
+
+.row td {
+  color: #cacaca;
+}
+
+.wpos {
+  text-align: left;
+}
+
+.wpos td {
+  color: rgb(255,255,255);
+}
+
+table .col {
+  border-bottom: 1px solid #FFFFFF;
+  background-color: #3C1874;
+  text-align: left;
+}
+
+.wpos:hover td {
+  background-color: #3C1874;
+}
+
+/*css is from https://www.w3schools.com/css/css_navbar.asp had to be adapted to work with the html code and some colouring was changed.No author found.No date found*/
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: rgba(230, 230, 250, 1);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+
+.nav li a:hover {
+  background-color: #111;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
